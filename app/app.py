@@ -25,7 +25,7 @@ def inicio():
     # Calcular el índice del primer registro y limitar la consulta a un rango de registros
     start_index = (page_num - 1) * per_page + 1
 
-    querySQL = (f"SELECT id, paisnombre, fecha "
+    querySQL = (f"SELECT id, paisnombre "
                 f"FROM pais WHERE id >= 1 "
                 f"ORDER BY id DESC LIMIT {per_page} OFFSET {start_index - 1}")
     cursor.execute(querySQL)
